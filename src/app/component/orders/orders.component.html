@@ -1,0 +1,27 @@
+<div id="order-component">
+    <div class="title">Recent Order</div>
+    <div class="grid">
+        <div class="header">
+            <div class="flex-0">#</div>
+            <div class="flex-1">Customer</div>
+            <div class="flex-1">Products</div>
+            <div>Delevery Date</div>
+            <div>Status</div>
+            <div>Tracking No#</div>
+            <div>Shipping</div>
+            <div class="flex-0"></div>
+        </div>
+        <div class="body">
+            <div class="row" *ngFor="let order of orders; let i=index">
+                <div class="flex-0">{{ i + 1 | number:'2.0' }}</div>
+                <div class="flex-1">{{ order.name }}</div>
+                <div class="flex-1">{{ order.product }}</div>
+                <div>{{ order.delivery_date | date : 'dd MMM, yyyy ' }}</div>
+                <div> <span class="status" [ngClass]="order.status">{{ order.status }}</span> </div>
+                <div>{{ order.tracking_no }}</div>
+                <div>{{ order.shipping ? 'Yes' : 'No' }}</div>
+                <div class="flex-0"><i class="fa-solid fa-close"></i></div>
+            </div>
+        </div>
+    </div>
+</div>

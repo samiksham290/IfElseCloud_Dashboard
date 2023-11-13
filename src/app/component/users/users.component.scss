@@ -1,0 +1,20 @@
+@import '/src/variables';
+#user-component {
+    background: $white-color;
+
+    .title {
+        padding: 32px;
+        padding-bottom: 0;
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .cards {
+        height: 244px;
+        overflow-y: hidden;
+            
+        &:hover {
+            overflow-y: auto;
+        }
+    }
+}

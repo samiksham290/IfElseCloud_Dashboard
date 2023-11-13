@@ -1,0 +1,22 @@
+<div class="user-card">
+    <div class="card-content">
+        <div class="picture">
+            <img [src]="user.picture" [alt]="user.name">
+            <div class="status" [ngClass]="{'activate': user.isActive, 'deactivate' : !user.isActive }"></div>
+        </div>
+        <div class="user-info">
+            <div class="name">{{ user.name}}</div>
+            <div class="country"> {{ user.country }} </div>
+        </div>
+        <div class="progress-wrapper">
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" [ngClass]="{'activate': user.isActive, 'deactivate' : !user.isActive }" [style.width.%]="user.progress"></div>
+                <div class="progress-percent" [ngClass]="{'activate': user.isActive, 'deactivate' : !user.isActive }" [style.left.%]="user.progress">{{ user.progress }}%</div>
+            </div>
+            
+        </div>
+    </div>
+    <div>
+        <div class="more" [ngClass]="{'activate': active }">More</div>
+    </div>
+</div>

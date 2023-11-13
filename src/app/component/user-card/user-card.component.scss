@@ -1,0 +1,98 @@
+@import '/src/variables';
+
+.user-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-100-color;
+    padding: 12px 32px;
+
+    .card-content {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        .picture {
+            position: relative;
+            width: 45px;
+    
+            img {
+                border-radius: 50%;
+            }
+            .status {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                position: absolute;
+                right: 11px;
+                bottom: 9px;
+                &.activate {
+                    background: $primary-color;
+                }
+                &.deactivate {
+                    background: $green-color;
+                }
+            }
+        }
+    
+        .user-info {
+            width: 120px;
+            .name {
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .country {
+                font-size: 10px;
+                color: $grey-300-color;
+            }
+        }
+
+        .progress-wrapper {
+            display: flex;
+            gap: 16px;
+            .progress-bar-wrapper {
+                width: 100px;
+                position: relative;
+                .progress-bar {
+                    height: 4px;
+                    border-radius: 2px;
+                    &.activate {
+                        background: $primary-color;
+                    }
+                    &.deactivate {
+                        background: $green-color;
+                    }
+                }
+
+                .progress-percent {
+                    font-size: 12px;
+                    position: absolute;
+                    bottom: -6px;
+                    margin-left: 8px;
+                    
+                    &.activate {
+                        color: $primary-color;
+                    }
+                    &.deactivate {
+                        color: $green-color;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+
+    .more {
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+        background: $grey-50-color;
+        color: $grey-300-color;
+        &.activate {
+            background: $primary-color;
+            color: $white-color;
+        }
+    }
+
+}

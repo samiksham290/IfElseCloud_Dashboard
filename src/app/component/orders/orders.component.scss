@@ -1,0 +1,66 @@
+@import '/src/variables';
+
+#order-component {
+    background: $white-color;
+    padding: 32px;
+    .title {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .grid {
+        width: 100%;
+        .body {
+            height: 200px;
+            overflow-y: hidden;
+            
+            &:hover {
+                overflow-y: auto;
+            }
+        }
+        .header, .row {
+            display: flex;
+            flex-wrap: nowrap;
+            border-top: 1px solid #ddd;
+            padding: 12px 8px;
+            font-size: 13px;
+
+            div {
+                width: 100px;
+                text-align: center;
+                color: $grey-500-color;
+                
+
+                &.flex-0 {
+                    width: 40px;
+                }
+                &.flex-1 {
+                    text-align: left;
+                    flex-basis: 200px
+                }
+
+                .status {
+                    color: $white-color;
+                    font-size: 10px;
+                    padding: 2px 8px;
+                    border-radius: 2px;
+
+                    &.Paid {
+                        background: $green-color;
+                    }
+                    &.Failed {
+                        background: $red-color;
+                    }
+                    &.Pending {
+                        background: $blue-grey-color;
+                    }
+                }
+            }
+        }
+        
+        .header  {
+            color: $grey-500-color;
+            font-weight: bold;
+        }
+    }
+}

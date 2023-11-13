@@ -1,0 +1,10 @@
+@import '/src/variables';
+
+#balance-overview {
+    background: $white-color;
+    padding: 32px;
+    .title {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,21 @@
+@import '/src/variables';
+
+#left-nav-component {
+    background-color: $white-color;
+    height: 100%;
+
+    .nav {
+        padding: 26px;
+        text-align: center;
+        
+        &.selected {
+            color: $primary-color;
+        }
+
+        &.nav-head {
+            background: $primary-color;
+            color: $white-color;
+            margin-bottom: 24px;
+        }
+    }
+}

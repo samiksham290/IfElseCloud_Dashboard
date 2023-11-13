@@ -1,0 +1,25 @@
+<div id="dashboard-component">
+    <div class="card-wrapper">
+        <app-data-cards [data]="dashboardData.top_cards"></app-data-cards>        
+    </div>
+    <div class="section">
+        <div class="order">
+            <app-orders [data]="dashboardData.recent_orders"></app-orders>
+        </div>
+        <div class="user">
+            <app-users [data]="dashboardData.new_users"></app-users>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="sales-stats">
+            <app-sales-statistics></app-sales-statistics>
+        </div>
+        <div class="balance-overview">
+            <app-balance-overview></app-balance-overview>
+        </div>
+        <div class="top-product">
+            <app-top-product></app-top-product>
+        </div>
+    </div>
+</div>

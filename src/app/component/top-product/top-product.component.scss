@@ -1,0 +1,17 @@
+@import '/src/variables';
+
+#top-product {
+    background: $white-color;
+    padding: 32px;
+    .title {
+        font-size: 20px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+
+        .fa-solid {
+            color: $grey-300-color;
+            font-size: 15px;
+        }
+    }
+}

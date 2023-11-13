@@ -1,0 +1,27 @@
+@import '/src/variables';
+
+#sales-stats {
+    background: $white-color;
+    padding: 32px;
+    .title {
+        font-size: 20px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+
+        select {
+            appearance: none; /* Remove default arrow in some browsers */
+            background: url('../../../assets/icons/arrow-down.png') no-repeat right center;
+            padding-right: 15px; /* Adjust as needed */
+            border: none;
+            &::after {
+                content: '\25BC'; /* Unicode character for a downward-pointing triangle */
+                position: absolute;
+                top: 50%;
+                right: 10px; /* Adjust as needed */
+                color: red; /* Change the color of the arrow */
+                transform: translateY(-50%);
+              }
+        }
+    }
+}

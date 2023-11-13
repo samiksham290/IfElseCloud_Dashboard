@@ -1,0 +1,53 @@
+@import '/src/variables';
+
+.card {
+    display: flex;
+    justify-content: space-between;
+
+    .data-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background: $white-color;
+        padding: 16px;
+        border-radius: 4px;
+        width: 21%;
+
+        .content {
+            .number {
+                font-size: 40px;
+                color: $primary-color;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .text {
+                font-size: 12px;
+                padding: 4px 0px;
+            }
+        }
+
+        &.selected {
+            background: $primary-color;
+            color: $white-color;
+
+            .content {
+                .number {
+                    color: $white-color;
+                }
+            }
+
+            .icon {
+                color: $white-color;
+            }
+
+        }
+
+        .icon {
+            font-size: 40px;
+            color: $grey-color;
+        }
+    }
+}

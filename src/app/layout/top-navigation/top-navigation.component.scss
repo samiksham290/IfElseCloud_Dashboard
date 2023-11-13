@@ -1,0 +1,92 @@
+@import '/src/variables';
+
+#top-navigation-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background: $white-color;
+    
+    .search {
+        color: $grey-color;
+
+        input {
+            border: none;
+            margin-left: 16px;
+
+            &::placeholder {
+                color: $grey-color;
+                opacity: 1; /* Firefox */
+            }
+              
+            &::-ms-input-placeholder { /* Edge 12-18 */
+            color: $grey-color;
+            }
+        }
+    }
+
+    .right-nav-wrapper {
+        display: flex;
+        gap: 24px;
+        .translate {
+            display: flex;
+            select {
+                appearance: none; /* Remove default arrow in some browsers */
+                background: url('../../../assets/icons/arrow-down.png') no-repeat right center;
+                padding-right: 15px; /* Adjust as needed */
+                border: none;
+                &::after {
+                    content: '\25BC'; /* Unicode character for a downward-pointing triangle */
+                    position: absolute;
+                    top: 50%;
+                    right: 10px; /* Adjust as needed */
+                    color: red; /* Change the color of the arrow */
+                    transform: translateY(-50%);
+                  }
+            }
+        }
+        .menus {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            .menu-item {
+                color: $grey-color;
+                position: relative;
+
+                .dot {
+                    font-size: 60px;
+                    position: absolute;
+                    bottom: 1px;
+                    right: -12px;
+
+                    &.green {
+                        color: $green-color;
+                    }
+                    
+                    &.red {
+                        color: $red-color;
+                    }
+                }
+            }
+        }
+
+        .display-photo {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            gap: 16px;
+            img {
+                width: 34px;
+                border-radius: 4px;
+            }
+
+            .user-name {
+                background: url('../../../assets/icons/arrow-down.png') no-repeat right center;
+                padding-right: 17px; /* Adjust as needed */
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="data-card" [class.selected] = "0 === i" *ngFor="let card of cards; let i=index">
+        <div class="content">
+            <div class="number">{{card.value}}%</div>
+            <div class="title">{{ card.header }}</div>
+            <div class="text">{{ card.sub_header }}...</div>
+        </div>
+        <div class="icon">
+            <i class="fa-solid" [ngClass]="icons[i]"></i>
+        </div>
+    </div>
+</div>
